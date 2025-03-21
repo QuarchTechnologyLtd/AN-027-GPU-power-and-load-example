@@ -1,42 +1,41 @@
-# AN-012 - Python Control of Power Modules via QIS
+# AN-027 - GPU Power and Load Example
 
 ## Overview
-This application note demonstrates the control of Quarch Power Modules via QIS (Quarch Instrumentation System) using the `quarchpy` Python package. Automating via QIS provides a lower overhead compared to running QPS (Quarch Power Studio) in full, but still offers easy access to data for custom processing. This example script streams data from a Quarch power module and dumps it into a CSV file.
+This application note demonstrates automated control over Quarch Power Studio (QPS) for capturing GPU power and load metrics. The example script shows how to add annotations and datapoints to a QPS stream.
 
 ## Features
-- Scanning for Quarch modules via QIS
-- Connecting to a Quarch module via QIS
-- Setting up and running QIS data streaming functions
+- Scanning for Quarch devices
+- Connecting to a Quarch PPM
+- Setting up and running data streaming functions
+- Capturing GPU power and load metrics
+- Adding custom performance channels to the QPS stream
 
 ## Requirements
 
 ### Hardware
-- Quarch Power Module (PPM/PAM)
+- Quarch Power Module (PPM)
 - Host PC
-- Power supply for the relevant module
 - USB or LAN connection to the module
+- Quarch GPU PAM or similar, set to measure GPU power consumption
 
 ### Software
 - Python (3.x recommended)
   - [Download Python](https://www.python.org/downloads/)
-- Java 8, with JavaFX
-  - [Java 8 with JavaFX](https://quarch.com/support/faqs/java/)
 - Quarchpy Python package
   - [Quarchpy Python Package](https://quarch.com/products/quarchpy-python-package/)
 - Quarch USB driver (Required for USB-connected devices on Windows only)
   - [Quarch USB Driver](https://quarch.com/downloads/drivers/)
 - Check USB permissions if using Linux
   - [USB Permissions](https://quarch.com/support/faqs/usb/)
-
 ## Instructions
 
-1. Install the required items listed above.
-2. Connect a PPM/PAM device via USB or LAN and power it up.
-3. Run the script and follow any instructions on the terminal.
+1. Install the required software listed above.
+2. Connect the Quarch module to your PC via USB or LAN and power it on.
+3. Run the script and follow the instructions on screen.
 
-## Provided Example Scripts
+## Provided Files
 
-- `QisStreamExample.py` - Demonstrates scanning for Quarch modules, connecting to a module, and running various data streaming functions based on the selected module.
+- `GpuCaptureExample.py` - Script demonstrating automated control over QPS to capture GPU power and load metrics.
 
 ## License
 This project is provided under the terms specified at:
